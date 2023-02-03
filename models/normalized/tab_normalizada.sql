@@ -6,7 +6,7 @@ with tab_normalizada as (
         cast(JSON_EXTRACT_PATH_TEXT("_AIRBYTE_DATA",'year') as numeric) as "year",
         cast(JSON_EXTRACT_PATH_TEXT("_AIRBYTE_DATA",'model') as varchar) as "model",
         cast(JSON_EXTRACT_PATH_TEXT("_AIRBYTE_DATA",'price') as float) as "price"
-    from desenv._airbyte_raw_products
+    from dbt._airbyte_raw_products
 )
 select * from tab_normalizada
 
